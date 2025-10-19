@@ -1,7 +1,17 @@
 <resources>
-    <string name="app_name">counter app</string>
+    <string name="app_name">Counter App</string>
+
     <string name="team_a">Team A</string>
     <string name="team_b">Team B</string>
-    <string name="reset">Reset</string>
 
+    <string name="score_a">0</string>
+    <string name="score_b">0</string>
+
+    <string name="btn_plus">+</string>
+    <string name="btn_minus">-</string>
+    <string name="reset">RESET</string>
+
+    <string name="vs">VS</string>
+
+    <string name="made_by">Made by Ahmaryar Khan (CSF120222065)</string>
 </resources>

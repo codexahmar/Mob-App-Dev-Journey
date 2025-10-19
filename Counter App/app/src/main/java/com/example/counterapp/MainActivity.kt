@@ -9,11 +9,6 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
 class MainActivity : AppCompatActivity() {
-    private var scoreA=0
-    private var scoreB=0
-
-
-
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,6 +22,8 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+        var  scoreA=0
+        var  scoreB=0
 
         val scoreATextView=findViewById<TextView>(R.id.scoreA)
         val scoreBTextView=findViewById<TextView>(R.id.scoreB)
@@ -42,6 +39,7 @@ class MainActivity : AppCompatActivity() {
         btnPlusA.setOnClickListener {
             scoreA++
             scoreATextView.text=scoreA.toString()
+
         }
 
         btnPlusB.setOnClickListener {
