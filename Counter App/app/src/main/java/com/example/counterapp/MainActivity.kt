@@ -9,34 +9,64 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
 class MainActivity : AppCompatActivity() {
-    private var count = 0
+    private var scoreA=0
+    private var scoreB=0
+
+
+
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
+
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        val counterText = findViewById<TextView>(R.id.counterText)
-        val incrementBtn = findViewById<Button>(R.id.incrementBtn)
-        val decrementBtn = findViewById<Button>(R.id.decrementBtn)
-        val resetBtn = findViewById<Button>(R.id.resetBtn)
 
-        incrementBtn.setOnClickListener { count++
-            counterText.text = count.toString()
+        val scoreATextView=findViewById<TextView>(R.id.scoreA)
+        val scoreBTextView=findViewById<TextView>(R.id.scoreB)
 
+        val btnPlusA=findViewById<Button>(R.id.btnPlusA)
+        val btnPlusB=findViewById<Button>(R.id.btnPlusB)
+
+        val btnMinusA=findViewById<Button>(R.id.btnMinusA)
+        val btnMinusB=findViewById<Button>(R.id.btnMinusB)
+
+        val resetBtn=findViewById<Button>(R.id.resetBtn)
+
+        btnPlusA.setOnClickListener {
+            scoreA++
+            scoreATextView.text=scoreA.toString()
         }
-decrementBtn.setOnClickListener {
-    if (count > 0) {
-        count--
-    }
-    counterText.text = count.toString()
-}
-resetBtn.setOnClickListener { count = 0
-    counterText.text=count.toString()
 
+        btnPlusB.setOnClickListener {
+            scoreB++
+            scoreBTextView.text=scoreB.toString()
+        }
+
+        btnMinusA.setOnClickListener {
+            if (scoreA>0){
+                scoreA--
+                scoreATextView.text=scoreA.toString()
+            }
+        }
+
+        btnMinusB.setOnClickListener {
+            if (scoreB>0){
+                scoreB--
+                scoreBTextView.text=scoreB.toString()
+            }
+        }
+resetBtn.setOnClickListener {
+    scoreA=0
+    scoreB=0
+    scoreATextView.text=scoreA.toString()
+    scoreBTextView.text=scoreB.toString()
 }
 
     }
