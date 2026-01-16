@@ -1,6 +1,4 @@
 /**
- * DataTypes.kt
- *
  * This file demonstrates all major Kotlin data types
  * with examples, variable usage, and type conversions.
  *
