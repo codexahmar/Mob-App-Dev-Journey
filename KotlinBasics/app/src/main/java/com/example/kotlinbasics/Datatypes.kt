@@ -1,3 +1,5 @@
+package com.example.kotlinbasics
+
 /**
  * This file demonstrates all major Kotlin data types
  * with examples, variable usage, and type conversions.
@@ -113,4 +115,3 @@ fun main() {
     // --------------------------------------------------
 }
 
-/**
