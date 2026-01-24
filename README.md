@@ -6,7 +6,7 @@ Each folder inside this repo represents a **mini project** or **concept-based ap
 
 ---
 
-## 🚀 Current Projects
+##  Current Projects
 
 ### 🧮 Counter App
 My first Android project — a simple **Counter App** that allows users to increment, decrement, and reset a number with a clean, dark-themed UI.
